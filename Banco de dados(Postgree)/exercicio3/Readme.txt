@@ -1,0 +1,1 @@
+Rodar script para normalizar o banco enviado.

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria</title>
+    <link rel="shortcut icon" href="../img/pizza.ico" >
+    <script src="../sources/index.js"></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<header>
+    <h1>Pizzaria da Rapaziada</h1>
+</header>
+
+<body>
+    <div id="menu">
+    <form action="../sources/index.js" method="post" class="formulario">
+        <fieldset>
+            <legend>Opcões da pizza</legend>
+            <label for="tamanho">Escolha um tamanho: </label>
+            <select id="tamanho" name="tamanho">
+                <option value= null>Selecione</option>
+                <option value=25>Pequena (20cm - R$25,00)</option>
+                <option value=30>Média (25cm - R$30,00)</option>
+                <option value=40>Grande (30cm - R$40,00)</option>
+                <option value=45>Familia (40cm - R$45,00)</option>
+            </select><br><br>
+            
+
+            <label for="borda">Escolha um tipo de borda: </label>
+            <select id="borda" name="borda">
+                <option value= null>Selecione</option>
+                <option value="10">Borda de Gorgonzola (R$10,00)</option>
+                <option value="10">Borda de Provolone (R$10,00)</option>
+                <option value="10">Borda de Catupiry (R$10,00)</option>
+                <option value="10">Borda de Cheddar (R$10,00)</option>
+                <option value="0">Sem borda (R$0,00)</option>
+            </select><br><br>
+
+
+            <label for="sabor">Escolha um sabor: </label>
+            <select id="sabor" name="sabor">
+                <option value= null>Selecione</option>
+                <option value="Calabresa">Calabresa (Mussarela, Calabresa e cebola)</option>
+                <option value="Quatro queijos">4 queijos (Mussarela, Cheddar, Parmesão e Prato)</option>
+                <option value="Frango com Catupiry">Frango com Catupiry (Mussarela, Frango e Catupiry)</option>
+                <option value="Portuguesa">Portuguesa (Mussarela, Pimentão, Cebola, Presunto, Ovo, Cebola)</option>
+                <option value="Camarao">Camarão (Mussarela, Camarão, Salsinha e Cebolinha)</option>
+                <option value="Carne seca">Carne Seca(Mussarela, Carne seca e cream cheese)</option>
+                <option value="Lombo canadense">Lombo Canadense (Mussarela, Lombo Canadense, Tomate, Orégano, Cebola)
+                </option>
+                <option value="xfritas">X-Fritas(Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata
+                    Frita)
+                </option>
+            </select><br><br>
+
+
+
+            <label for="sabor2">Escolha outro ou nenhum sabor: </label>
+            <select id="sabor2" name="sabor2">
+                <option value= null>Selecione</option>
+                <option value="/Calabresa">Calabresa (Mussarela, Calabresa e cebola)</option>
+                <option value="/Quatro queijos">4 queijos (Mussarela, Cheddar, Parmesão e Prato)</option>
+                <option value="/Frango com catupiry">Frango com Catupiry (Mussarela, Frango e Catupiry)</option>
+                <option value="/Portuguesa">Portuguesa (Mussarela, Pimentão, Cebola, Presunto, Ovo, Cebola)</option>
+                <option value="/Camarao">Camarão (Mussarela, Camarão, Salsinha e Cebolinha)</option>
+                <option value="/Carne seca">Carne Seca(Mussarela, Carne seca e cream cheese)</option>
+                <option value="/Lombo canadense">Lombo Canadense (Mussarela, Lombo Canadense, Tomate, Orégano, Cebola)
+                </option>
+                <option value="xfritas">X-Fritas(Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata
+                    Frita)
+                </option>
+                <option value="Sabor único">Nenhum</option>
+            </select><br><br>
+            <label>Comentário adicional: </label>
+            <input id="comentario" type="text" placeholder="Ex: Sem cebola" />
+        </fieldset>
+
+        <fieldset>
+            <legend>Bebida</legend>
+            <label for="bebida">Escolha um tipo de bebida: </label>
+            <select id="bebida" name="bebida">
+                <option value= null>Selecione</option>
+                <option value= 12>Coca Cola (R$12,00)</option>
+                <option value= 10>Fanta (R$10,00)</option>
+                <option value= 10>Guaraná Antartica (R$10,00)</option>
+                <option value= 8>H2O (R$8,00)</option>
+                <option value= 7>Del Valle (R$7,00)</option>
+                <option value= 0>Nada para beber</option>
+            </select>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Entrega</legend>
+            <label for="tipodeentrega">Escolha um tipo de entrega: </label>
+            <select id="tipodeentrega" name="tipodeentrega" onchange="ativarEntrega()">
+                <option value= null>Selecione</option>
+                <option value= 0>Retirada no Balcão (R$0,00)</option>
+                <option value= 5>(Delivery - R$5,00)</option>
+            </select>
+            <br>
+            <label>Nome:</label>
+                <input id= "nome" type="text" placeholder="Digite o nome*" required/>
+                <br>
+            <div id=dadosEntrega>
+                
+                <label>Celular</label>
+                <input id="celular" type="text" placeholder="Digite o telefone*" required/>
+                <br>
+
+           
+                <label>Endereço</label>
+                <input id="endereco" type="text" placeholder="Digite a rua*" required/>
+                <br>
+
+            
+                <label>Número</label>
+                <input id="numero" type="text" placeholder="Digite o número*" required/>
+                <br>
+
+            
+                <label>Complemento</label>
+                <input id="complemento" type="text" value="" placeholder="Opcional" />
+                <br>
+
+            
+                <label>Bairro</label>
+                <input id="bairro" type="text" placeholder="Digite o bairro*" required/>
+                <br>
+
+            
+                <label>Ponto de referência</label><br>
+                <input id="referencia" name="mensagem" value="" placeholder="Opcional"></input>
+            </div>
+            
+            <label for="pagamento">Escolha a forma de pagamento: </label>
+            <select id="pagamento" name="pagamento" onchange= "validarTroco()">
+                <option value= null>Selecione</option>
+                <option value="dinheiro">Dinheiro</option>
+                <option value="credito">Cartão de crédito</option>
+                <option value="debito">Cartão de débito</option>
+                <option value="pix">Pix</option>
+                <option value="picpay">PicPay</option>
+            </select>
+            <br>
+
+            <label>Precisa de troco</label>
+            <select id="troco" onchange= "validarForm()">
+                <option value= null>Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+            <input type="text" id = inputTroco placeholder="Troco para quanto?" />
+            
+
+        </fieldset>
+        <input class="botao" type="button" onclick="finalizarPedido()" value="Finalizar pedido">
+    </div>
+        <script src="../sources/index.js"></script>
+    <div id="botoes">
+        <input class="botao" type="button" onclick="fazerAlteracao()" value="Fazer Alteracao">
+        <input class="botao" type="button" onclick="fecharPedido()" value="Finalizar pedido">
+    </div>
+</body>
+
+</html>
+
