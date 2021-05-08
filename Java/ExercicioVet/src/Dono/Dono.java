@@ -1,7 +1,8 @@
 package Dono;
 
+
 import Pets.Pet;
-import Pets.TipoPet;
+
 
 public class Dono {
 	private String nome;
@@ -31,11 +32,9 @@ public class Dono {
 	public void setPet(Pet pet) {
 		this.pet = pet;
 	}
-	
-	public void adicionarPet(Pet pet){
+
+	public void petDono(Pet novoPet) {
 		this.setPet(pet);
 	}
-	
-	
 	
 }

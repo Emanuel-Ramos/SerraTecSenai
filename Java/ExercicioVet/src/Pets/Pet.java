@@ -51,7 +51,9 @@ public class Pet {
 	}
 	
 	public void vacinar(LocalDate data, double valor) {
-		
+		this.data_vacinacao = data;
+		this.valor_vacinas = valor;
+		this.vacinado = true;
 	}
 	
 	
