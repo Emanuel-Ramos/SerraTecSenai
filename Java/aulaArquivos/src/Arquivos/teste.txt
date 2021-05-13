@@ -1,3 +1,9 @@
 Nome: Guilherme Santos, Idade: 40, Data de Nascimento: 1980-09-08Pet: [Pet nome Gato]
 Nome: Maria Silva, Idade: 55, Data de Nascimento: 2012-12-12Pet: [Pet nome Zion]
 Nome: flavinha, Idade: 14, Data de Nascimento: 2015-10-13Pet: [Pet nome Zion, Pet nome Clifford]
+Nome: <Emanuel Ramos> - CPF: 162.619.287-11 - Data de nascimento: 2001-01-01 Salario Bruto: 10000.0
+Dependentes: [Tipo Dependente: <FILHO>]
+Nome: <Gustavo Xavier> - CPF: <874.123.402-98> - Data de nascimento: 2002-11-01 Salario Bruto: 10000.0
+Dependentes: [Tipo Dependente: <SOBRINHO>, Tipo Dependente: <SOBRINHO>]
+Nome: <Joao Stael> - CPF: <564.039.127-23> - Data de nascimento: 1998-12-06 Salario Bruto: 10000.0
+Dependentes: []
