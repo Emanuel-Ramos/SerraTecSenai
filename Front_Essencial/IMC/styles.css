@@ -1,0 +1,32 @@
+.inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    height: 500px;
+}
+
+.inputs input{
+    display: flex;
+    margin-right: 10px;
+    width: auto;
+}
+
+.inputs label{
+    margin-right: 10px;
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    width: 500px;
+    height: 100px;
+}
+
+.resultado {
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
