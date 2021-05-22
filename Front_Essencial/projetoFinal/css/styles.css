@@ -1,0 +1,179 @@
+body {
+  background-color: #1f1f1f;
+}
+.btn-novidade {
+  display: flex;
+  align-self: center;
+}
+
+.logos {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.logos:hover {
+  background-color: #e5e5e5;
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+}
+
+.marcas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: white;
+  height: 100px;
+  width: 100%;
+}
+
+.imgLayer {
+  margin-top: 5rem;
+  height: auto;
+  width: 100%;
+}
+
+.titleImg {
+  height: auto;
+  width: 100%;
+}
+
+.carousel-caption {
+  background-color: rgba(12, 12, 12, 0.6);
+  justify-content: center;
+  flex-direction: column;
+}
+.item {
+  align-self: center;
+  color: white;
+  align-items: flex-start;
+}
+
+.h1-carousel {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+.btnItem {
+  align-self: center;
+  margin: 5px;
+  border: none;
+}
+.btn-novidade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+}
+
+.ultimaNovidade {
+  /* padding-top: 5rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 500px;
+}
+
+.tituloNovidade {
+  color: white;
+}
+
+.subtituloNovidade {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.753);
+}
+
+.detalhesNovidade {
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.detalhesNovidade-img {
+  height: 350px;
+  width: 600px;
+}
+
+.detalhesNovidade-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.detalhesDestaque {
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-image: url("https://cdn.wallpapersafari.com/82/90/zjlyU9.jpg");
+}
+
+.detalhesDestaque-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.destaque {
+  display: flex;
+  flex-direction: column;
+}
+
+.tituloDestaque {
+  color: white;
+  align-self: flex-end;
+}
+
+.subtituloDestaque {
+  margin-top: 1rem;
+  color: #212f3c;
+  align-self: flex-end;
+}
+
+.btn-divnov {
+  align-self: flex-start;
+}
+
+.btn-divdtk {
+  align-self: flex-end;
+}
+
+footer {
+  box-shadow: 0 3px 6px hsl(0deg 0% 50% / 28%);
+  background-color: #1b2631;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.resume {
+  width: 300px;
+  text-align: justify;
+}
+
+.fs-5 {
+  color: white;
+}
+
+.footer-h5 {
+  color: white;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+}
+
+.itemList {
+  margin-right: 100px;
+}
