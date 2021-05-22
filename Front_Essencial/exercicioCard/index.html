@@ -10,22 +10,26 @@
 </head>
 <body>
     <header>
+        <div class="menu">
         <h2>Cards com meus itens preferidos</h2>
-        <div class="d-flex flex-column bd-highlight align-items-start mb-3">
-            <div class="inputArea">
-                <input class="form-control" id="titulo" placeholder="Titulo">
-
+        <form>
+            <div class="d-flex flex-column bd-highlight align-items-start mb-3">
+                <div class="inputArea">
+                    <input class="form-control" id="titulo" placeholder="Titulo" required>
+                    
+                </div>
+                <div class="inputArea">
+                    
+                    <input class="form-control" id="URL" placeholder="URL" required>
+                </div>
+                <div class="inputArea">
+                    <textarea class="form-control" id="descricao" placeholder="Descricao" required></textarea>
+                    
+                </div>
             </div>
-            <div class="inputArea">
-
-                <input class="form-control" id="URL" placeholder="URL">
-            </div>
-            <div class="inputArea">
-                <textarea class="form-control" id="descricao" placeholder="Descricao"></textarea>
-
-            </div>
-          </div>
-          <button id="btnAdd" type="button" class="btn btn-primary">Adicionar</button>
+            <button id="btnAdd" type="submit" class="btn btn-primary">Adicionar</button>
+        </form>
+        </div>
     </header>
     <div class="cards">
         

@@ -1,7 +1,10 @@
 const btn = document.querySelector('#btnAdd');
 const div = document.querySelector('.cards');
+const form = document.querySelector('form');
 
-btn.addEventListener('click', () => {
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault()
     let titulo = document.querySelector('#titulo').value;
     let img = document.querySelector('#URL').value;
     let descricao = document.querySelector('#descricao').value;

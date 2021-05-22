@@ -1,14 +1,10 @@
-body {
-    background-color: gray;
-}
+
 
 header {
-    background-color: rgb(207, 1, 1);
-    height: 20rem;
+    background-color: rgb(39, 41, 218);
+    height: 25rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    border-bottom: 3px solid black;
 }
 
 .inputArea{
@@ -16,8 +12,9 @@ header {
     margin-top: 10px;
 }
 
-#descricao {
-    width: 200px;
+#descricao  {
+    width: 300px;
+    height: 120px;
 }
 
 .btn {
@@ -27,11 +24,23 @@ header {
 .cards {
     display: flex;
     flex-direction: row;
-    
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 12rem;
 }
 
 .card {
-    width: 18rem;
-    height: 10rem;
-    margin-right: 10px;
+    width: 350px;
+    margin: 10px;
+    box-shadow: 0 3px 6px hsl(0deg 0% 50% / 28%);
+}
+
+.card-body{
+    box-shadow: 0 3px 6px hsl(0deg 0% 50% / 28%);
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
 }
