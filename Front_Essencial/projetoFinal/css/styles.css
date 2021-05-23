@@ -218,18 +218,11 @@ footer {
   background-color: #1f1f1f;
 }
 
-.cards-area {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: row;
-}
-
 .card {
   background-color: #1f1f1f;
-  border: 2px solid white;
-  margin: 5px;
-  width: 300px;
+  margin: 50px;
+  width: 250px;
+  box-shadow: 0 3px 6px hsl(0deg 0% 50% / 28%);
 }
 
 .card-title {

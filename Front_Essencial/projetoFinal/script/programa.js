@@ -16,48 +16,33 @@ const listaPerfumes = {
         valor: 30
     },
     4: {
-        nome: "",
-        categoria: "",
+        nome: "Rexona Clinical Clean",
+        categoria: "Desodorante",
         valor: 1
     },
     5: {
-        nome: "",
-        categoria: "",
+        nome: "Rexona Invisible white",
+        categoria: "Desodorante",
         valor: 1
     },
     6: {
-        nome: "",
-        categoria: "",
+        nome: "Rexona active emotion",
+        categoria: "Desodorante",
         valor: 1
     },
     7: {
-        nome: "",
-        categoria: "",
+        nome: "Floratta blue",
+        categoria: "Perfume",
         valor: 1
     },
     8: {
-        nome: "",
-        categoria: "",
+        nome: "Floratta red",
+        categoria: "Perfume",
         valor: 1
     },
     9: {
-        nome: "",
-        categoria: "",
-        valor: 1
-    },
-    10: {
-        nome: "",
-        categoria: "",
-        valor: 1
-    },
-    11: {
-        nome: "",
-        categoria: "",
-        valor: 1
-    },
-    12: {
-        nome: "",
-        categoria: "",
+        nome: "Floratta rose",
+        categoria: "Perfume",
         valor: 1
     }
 }
