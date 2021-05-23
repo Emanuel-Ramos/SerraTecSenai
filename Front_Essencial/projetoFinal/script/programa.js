@@ -79,9 +79,9 @@ function addToCart(id) {
 
     tdNome.append(listaPerfumes[id].nome)
     tdQuantidade.append(quantidade)
-    tdValor.append(listaPerfumes[id].valor)
+    tdValor.append("R$" + listaPerfumes[id].valor.toFixed(2))
     tdCategoria.append(listaPerfumes[id].categoria)
-    tdTotal.append(((listaPerfumes[id].valor) * parseInt(quantidade)).toFixed(2))
+    tdTotal.append("R$" + ((listaPerfumes[id].valor) * parseInt(quantidade)).toFixed(2))
 
     tr.append(tdNome)
     tr.append(tdCategoria)
