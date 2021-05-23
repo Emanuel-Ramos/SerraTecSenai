@@ -6,6 +6,10 @@ body {
   align-self: center;
 }
 
+.detalhesNovidade {
+  padding: 5rem;
+}
+
 .logos {
   display: flex;
   width: 100%;
@@ -66,6 +70,7 @@ p {
   margin: 5px;
   border: none;
 }
+
 .btn-novidade {
   display: flex;
   align-items: center;
@@ -80,7 +85,7 @@ p {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 500px;
+  height: 400px;
 }
 
 .tituloNovidade {
@@ -91,23 +96,9 @@ p {
   margin-top: 1rem;
   color: rgba(255, 255, 255, 0.753);
 }
-
-.detalhesNovidade {
-  padding: 3rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.detalhesNovidade-img {
-  height: 350px;
-  width: 600px;
-}
-
-.detalhesNovidade-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.subtituloTitulo {
+  width: auto;
+  color: white;
 }
 
 .detalhesDestaque {
@@ -124,26 +115,27 @@ p {
   justify-content: space-between;
 }
 
+#botao-format {
+  display: inline-block;
+  text-align: right;
+}
+
 .destaque {
   display: flex;
   flex-direction: column;
 }
-
 .tituloDestaque {
-  color: white;
-  align-self: flex-end;
+  font-size: 32px;
 }
-
-.subtituloDestaque {
+.subtituloDestaque,
+.tituloDestaque {
   margin-top: 1rem;
   color: #212f3c;
-  align-self: flex-end;
 }
 
 .btn-divnov {
   align-self: flex-start;
 }
-
 .btn-divdtk {
   align-self: flex-end;
 }
@@ -154,6 +146,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 3rem;
 }
 
 .resume {
@@ -176,4 +169,65 @@ footer {
 
 .itemList {
   margin-right: 100px;
+}
+
+.cabecalho {
+  background-color: #1f1f1f;
+  position: fixed;
+  height: 5rem;
+}
+.nav-link {
+  color: #fff !important;
+  text-decoration: none;
+  font-size: 22px;
+  margin-right: 15px;
+}
+#xeroso {
+  color: white;
+  font-family: "Releway";
+  font-size: 26px;
+}
+.logo-home {
+  height: 3rem;
+}
+
+.modal-title {
+  color: black;
+}
+
+.btn-icon {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  margin-right: 2rem;
+}
+
+.header-compras {
+  width: 100%;
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.btn-icon:hover {
+  background-color: #1f1f1f;
+}
+
+.cards-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.card {
+  background-color: #1f1f1f;
+  border: 2px solid white;
+  margin: 5px;
+  width: 300px;
+}
+
+.card-title {
+  color: white;
 }
