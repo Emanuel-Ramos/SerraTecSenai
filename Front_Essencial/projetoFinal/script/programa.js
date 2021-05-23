@@ -1,150 +1,94 @@
 //const atividades = document.querySelector('#atividade')
 const listaPerfumes = {
-    1 : {
+    1: {
         nome: "Quasar",
         categoria: "Perfume",
-        valor: 10
+        valor: 10.00
     },
     2: {
         nome: "Arbo",
         categoria: "Perfume",
-        valor: 20
+        valor: 20.00
     },
     3: {
         nome: "Malbec",
         categoria: "Perfume",
-        valor: 30
+        valor: 30.00
     },
     4: {
         nome: "Rexona Clinical Clean",
         categoria: "Desodorante",
-        valor: 1
+        valor: 14.00
     },
     5: {
         nome: "Rexona Invisible white",
         categoria: "Desodorante",
-        valor: 1
+        valor: 123.00
     },
     6: {
         nome: "Rexona active emotion",
         categoria: "Desodorante",
-        valor: 1
+        valor: 11.00
     },
     7: {
         nome: "Floratta blue",
         categoria: "Perfume",
-        valor: 1
+        valor: 123.00
     },
     8: {
         nome: "Floratta red",
         categoria: "Perfume",
-        valor: 1
+        valor: 14.00
     },
     9: {
         nome: "Floratta rose",
         categoria: "Perfume",
-        valor: 1
+        valor: 18.00
     }
 }
 
 const tBody = document.querySelector('#listaProdutos')
 
-function addToCart(id){
-    console.log(listaPerfumes[id])
-    let tr = document.createElement('tr')
-    let tdNome = document.createElement('td')
-    let tdQuantidade = document.createElement('td')
-    let tdValor = document.createElement('td')
-    let tdCategoria = document.createElement('td')
-    let tdTotal = document.createElement('td')
 
-    let tdExcluir = document.createElement('td')
-    let btnExcluir = document.createElement('button')
-    btnExcluir.textContent = 'excluir'
-    btnExcluir.classList.add('btn', 'btn-danger')
-    btnExcluir.addEventListener('click', function () {
-        tr.remove()
-    })
-    tdExcluir.append(btnExcluir)
+function addToCart(id) {
+    let quantidade = prompt("Digite a quantidade")
+    if (isNaN(quantidade) || quantidade == null) {
+        console.log("Not a number")
+        return
+    } else {
+        let tr = document.createElement('tr')
+        let tdNome = document.createElement('td')
+        let tdQuantidade = document.createElement('td')
+        let tdValor = document.createElement('td')
+        let tdCategoria = document.createElement('td')
+        let tdTotal = document.createElement('td')
 
-    
-    tdNome.append(listaPerfumes[id].nome)
-    tdQuantidade.append(1)
-    tdValor.append(listaPerfumes[id].valor)
-    tdCategoria.append(listaPerfumes[id].categoria)
-    tdTotal.append(parseInt(tdValor) * parseInt(tdQuantidade))
+        let tdExcluir = document.createElement('td')
+        let btnExcluir = document.createElement('button')
+        btnExcluir.textContent = 'excluir'
+        btnExcluir.classList.add('btn', 'btn-danger')
+        btnExcluir.addEventListener('click', function () {
+            tr.remove()
+        })
+        tdExcluir.append(btnExcluir)
 
+        tdNome.append(listaPerfumes[id].nome)
+        tdQuantidade.append(quantidade)
+        tdValor.append(listaPerfumes[id].valor)
+        tdCategoria.append(listaPerfumes[id].categoria)
+        tdTotal.append(((listaPerfumes[id].valor) * parseInt(quantidade)).toFixed(2))
 
-    tr.append(tdNome)
-    tr.append(tdCategoria)
-    tr.append(tdQuantidade)
-    tr.append(tdValor)
-    tr.append(tdTotal)
-    tr.append(tdExcluir)
+        tr.append(tdNome)
+        tr.append(tdCategoria)
+        tr.append(tdQuantidade)
+        tr.append(tdValor)
+        tr.append(tdTotal)
+        tr.append(tdExcluir)
 
-    console.log(tr)
+        console.log(tr)
 
-    tBody.append(tr)
+        tBody.append(tr)
+    }
+
 
 }
-
-// inputBtnLimpar.addEventListener('click',(event) => {
-//     event.preventDefault()
-//     const trs(document.querySelectorAll('tbody tr')
-//     trs.forEach((item) => {
-//         item.remove()
-//     })
-// })
-
-
-// btn.addEventListener('click', (event) => {
-//     event.preventDefault()
-
-//     let lista = {
-//         nome: inputNome.value,
-//         quantidade: inputQuantidade.value,
-//         valor: inputValor.value,
-//         categoria: inputCategoria.value,
-//         total: produto.quantidade * produto.valor
-//     }
-
-
-//     let tr = document.createElement('tr')
-
-//     let tdInputNome = document.createElement('td')
-//     let tdInputQuantidade = document.createElement('td')
-//     let tdInputValor = document.createElement('td')
-//     let tdInputCategoria = document.createElement('td')
-//     let tdInputTotal = document.createElement('td')
-
-//     let tdExcluir = document.createElement('td')
-//     let btnExcluir = document.createElement('button')
-//     btnExcluir.textContent = 'excluir'
-//     btnExcluir.classList.add('btn', 'btn-danger')
-//     btnExcluir.addEventListener('click', function () {
-//         tr.remove()
-//     })
-//     tdExcluir.append(btnExcluir)
-
-
-//     tdInputNome.textContent = lista.atividade
-//     tdInputQuantidade.textContent = lista.atividade
-//     tdInputValor.textContent = lista.atividade
-//     tdInputCategoria.textContent = lista.atividade
-//     tdInputTotal.textContent = lista.atividade
-
-
-//     tr.append(tdInputNome)
-//     tr.append(tdInputQuantidade)
-//     tr.append(tdInputValor)
-//     tr.append(tdInputCategoria)
-//     tr.append(tdInputTotal)
-//     tr.append(tdExcluir)
-//     lista.append(tr)
-
-//     nome.value = ''
-//     quantidade.value = ''
-//     valor.value = ''
-//     categoria.value = ''
-
-// })
