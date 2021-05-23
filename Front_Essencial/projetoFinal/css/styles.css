@@ -197,9 +197,12 @@ footer {
 
 .btn-icon {
   display: flex;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #1f1f1f;
   border: 0;
+  margin-top: 1rem;
   margin-right: 2rem;
+  position: fixed;
+  z-index: 1;
 }
 
 .header-compras {
@@ -208,6 +211,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .btn-icon:hover {
