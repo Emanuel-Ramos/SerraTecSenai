@@ -85,95 +85,117 @@
       </div>
     </div>
   </div>
-    <div class="container">
-      <div class="row">
-      <div class="card col-12">
-        <img class="card-img-top" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B73287/49b13ce2-f02a-4bab-9486-dcaeb2520df1-quasar-brave-desodorante-colonia-100ml.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Quasar</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <button id="1" class="btn btn-primary btn-add" class="btn btn-primary btn-add" onclick="addToCart(id)">Adicionar ao carrinho</button>
+  <div class="modal fade" id="modalQtd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-      </div>
-      <div class="card col-12" >
-        <img class="card-img-top" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B83590/B83590---a.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Arbo</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <button id="2" class="btn btn-primary btn-add" class="btn btn-primary btn-add" onclick="addToCart(id)">Adicionar ao carrinho</button>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Quantidade: </label>
+              <input type="number" min="1" class="form-control" id="inputQtd">
+            </div>
+          </form>
         </div>
-      </div>
-      <div class="card col-12">
-        <img class="card-img-top" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B73607/2dcdaf41-e906-4816-9786-36feb27304f5-malbec-desodorante-colonia-100-ml.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Malbec</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <button id="3" class="btn btn-primary btn-add" class="btn btn-primary btn-add" onclick="addToCart(id)">Adicionar ao carrinho</button>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button onclick="addToCart(id)" type="button" data-bs-dismiss="modal" class="btn btn-modal-add btn-primary">Adicionar</button>
         </div>
       </div>
     </div>
+  </div>
+  <div class="container">
     <div class="row">
-      <div class="card col-12">
-        <img class="card-img-top" src="https://asset-americas.unileversolutions.com/content/dam/unilever/rexona/brazil/active_in-use_products_/br_fop_clean-1561371-png.png.ulenscale.400x385.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Rexona Clinical Clean</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <button id="4" class="btn btn-primary btn-add" onclick="addToCart(id)">Adicionar ao carrinho</button>
-        </div>
-      </div>
-      <div class="card col-12" >
-        <img class="card-img-top" src="https://www.drogariaminasbrasil.com.br/media/product/4e7/desodorante-aerosol-rexona-antibacterial-invisible-masculino-90g-b6d.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Rexona Invisible white</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <button id="5" class="btn btn-primary btn-add" onclick="addToCart(id)">Adicionar ao carrinho</button>
-        </div>
-      </div>
-      <div class="card col-12">
-        <img class="card-img-top" src="https://drogariasp.vteximg.com.br/arquivos/ids/430948-1000-1000/Desodorante-Aerosol-Rexona-Feminino-Active-Emotion-90g-Drogaria-SP-580554-1.jpg?v=637483290022030000" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Rexona active emotion</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <button id="6" class="btn btn-primary btn-add" onclick="addToCart(id)">Adicionar ao carrinho</button>
-        </div>
+    <div class="card col-12">
+      <img class="card-img-top" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B73287/49b13ce2-f02a-4bab-9486-dcaeb2520df1-quasar-brave-desodorante-colonia-100ml.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Quasar</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <button class="btn btn-primary btn-add" class="btn btn-primary btn-add" data-bs-toggle="modal" data-bs-target="#modalQtd" data-bs-id="1">Adicionar ao carrinho</button>
       </div>
     </div>
-    <div class="row">
-      <div class="card col-12">
-        <img class="card-img-top" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B25458/e38de7ca-10db-43ab-be2d-2111d3e5c6c5-floratta-blue-desodorante-colonia-75ml.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Floratta blue</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <button id="7" class="btn btn-primary btn-add" onclick="addToCart(id)">Adicionar ao carrinho</button>
-        </div>
-      </div>
-      <div class="card col-12" >
-        <img class="card-img-top" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B75792/B75792.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Floratta red</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <button id="8" class="btn btn-primary btn-add" onclick="addToCart(id)">Adicionar ao carrinho</button>
-        </div>
-      </div>
-      <div class="card col-12">
-        <img class="card-img-top" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B25472/7b07fa58-91ae-4676-8bd8-13a521b9c0b2-floratta-rose-desodorante-colonia-75ml.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Floratta rose</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <button id="9" class="btn btn-primary btn-add" onclick="addToCart(id)">Adicionar ao carrinho</button>
-        </div>
+    <div class="card col-12" >
+      <img class="card-img-top" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B83590/B83590---a.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Arbo</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <button id="2" class="btn btn-primary btn-add" class="btn btn-primary btn-add"  data-bs-toggle="modal" data-bs-target="#modalQtd" data-bs-id="2">Adicionar ao carrinho</button>
       </div>
     </div>
+    <div class="card col-12">
+      <img class="card-img-top" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B73607/2dcdaf41-e906-4816-9786-36feb27304f5-malbec-desodorante-colonia-100-ml.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Malbec</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <button id="3" class="btn btn-primary btn-add" class="btn btn-primary btn-add"  data-bs-toggle="modal" data-bs-target="#modalQtd" data-bs-id="3">Adicionar ao carrinho</button>
+      </div>
     </div>
+  </div>
+  <div class="row">
+    <div class="card col-12">
+      <img class="card-img-top" src="https://asset-americas.unileversolutions.com/content/dam/unilever/rexona/brazil/active_in-use_products_/br_fop_clean-1561371-png.png.ulenscale.400x385.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Rexona Clinical Clean</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <button id="4" class="btn btn-primary btn-add"  data-bs-toggle="modal" data-bs-target="#modalQtd" data-bs-id="4">Adicionar ao carrinho</button>
+      </div>
+    </div>
+    <div class="card col-12" >
+      <img class="card-img-top" src="https://www.drogariaminasbrasil.com.br/media/product/4e7/desodorante-aerosol-rexona-antibacterial-invisible-masculino-90g-b6d.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Rexona Invisible white</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <button id="5" class="btn btn-primary btn-add"  data-bs-toggle="modal" data-bs-target="#modalQtd" data-bs-id="5">Adicionar ao carrinho</button>
+      </div>
+    </div>
+    <div class="card col-12">
+      <img class="card-img-top" src="https://drogariasp.vteximg.com.br/arquivos/ids/430948-1000-1000/Desodorante-Aerosol-Rexona-Feminino-Active-Emotion-90g-Drogaria-SP-580554-1.jpg?v=637483290022030000" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Rexona active emotion</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <button id="6" class="btn btn-primary btn-add"  data-bs-toggle="modal" data-bs-target="#modalQtd" data-bs-id="6">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card col-12">
+      <img class="card-img-top" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B25458/e38de7ca-10db-43ab-be2d-2111d3e5c6c5-floratta-blue-desodorante-colonia-75ml.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Floratta blue</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <button id="7" class="btn btn-primary btn-add"  data-bs-toggle="modal" data-bs-target="#modalQtd" data-bs-id="7">Adicionar ao carrinho</button>
+      </div>
+    </div>
+    <div class="card col-12" >
+      <img class="card-img-top" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/products/B75792/B75792.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Floratta red</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <button id="8" class="btn btn-primary btn-add"  data-bs-toggle="modal" data-bs-target="#modalQtd" data-bs-id="8">Adicionar ao carrinho</button>
+      </div>
+    </div>
+    <div class="card col-12">
+      <img class="card-img-top" src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B25472/7b07fa58-91ae-4676-8bd8-13a521b9c0b2-floratta-rose-desodorante-colonia-75ml.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Floratta rose</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <button id="9" class="btn btn-primary btn-add"  data-bs-toggle="modal" data-bs-target="#modalQtd" data-bs-id="9">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </div>
+  </div>
   </div>
   </div>
 

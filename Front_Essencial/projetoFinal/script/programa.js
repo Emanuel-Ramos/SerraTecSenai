@@ -49,46 +49,51 @@ const listaPerfumes = {
 
 const tBody = document.querySelector('#listaProdutos')
 
+const modalQtd = document.getElementById('modalQtd')
+modalQtd.addEventListener('show.bs.modal', function (event) {
+    let button = event.relatedTarget
+    let idCard = button.getAttribute('data-bs-id')
+    let idBtn = modalQtd.querySelector('.btn-modal-add')
+
+    idBtn.setAttribute('id', idCard)
+})
 
 function addToCart(id) {
-    let quantidade = prompt("Digite a quantidade")
-    if (isNaN(quantidade) || quantidade == null) {
-        console.log("Not a number")
-        return
-    } else {
-        let tr = document.createElement('tr')
-        let tdNome = document.createElement('td')
-        let tdQuantidade = document.createElement('td')
-        let tdValor = document.createElement('td')
-        let tdCategoria = document.createElement('td')
-        let tdTotal = document.createElement('td')
+    let inputQuantidade = document.querySelector('#inputQtd')
+    let quantidade = inputQuantidade.value
+    let tr = document.createElement('tr')
+    let tdNome = document.createElement('td')
+    let tdQuantidade = document.createElement('td')
+    let tdValor = document.createElement('td')
+    let tdCategoria = document.createElement('td')
+    let tdTotal = document.createElement('td')
 
-        let tdExcluir = document.createElement('td')
-        let btnExcluir = document.createElement('button')
-        btnExcluir.textContent = 'excluir'
-        btnExcluir.classList.add('btn', 'btn-danger')
-        btnExcluir.addEventListener('click', function () {
-            tr.remove()
-        })
-        tdExcluir.append(btnExcluir)
+    let tdExcluir = document.createElement('td')
+    let btnExcluir = document.createElement('button')
+    btnExcluir.textContent = 'excluir'
+    btnExcluir.classList.add('btn', 'btn-danger')
+    btnExcluir.addEventListener('click', function () {
+        tr.remove()
+    })
+    tdExcluir.append(btnExcluir)
 
-        tdNome.append(listaPerfumes[id].nome)
-        tdQuantidade.append(quantidade)
-        tdValor.append(listaPerfumes[id].valor)
-        tdCategoria.append(listaPerfumes[id].categoria)
-        tdTotal.append(((listaPerfumes[id].valor) * parseInt(quantidade)).toFixed(2))
+    tdNome.append(listaPerfumes[id].nome)
+    tdQuantidade.append(quantidade)
+    tdValor.append(listaPerfumes[id].valor)
+    tdCategoria.append(listaPerfumes[id].categoria)
+    tdTotal.append(((listaPerfumes[id].valor) * parseInt(quantidade)).toFixed(2))
 
-        tr.append(tdNome)
-        tr.append(tdCategoria)
-        tr.append(tdQuantidade)
-        tr.append(tdValor)
-        tr.append(tdTotal)
-        tr.append(tdExcluir)
+    tr.append(tdNome)
+    tr.append(tdCategoria)
+    tr.append(tdQuantidade)
+    tr.append(tdValor)
+    tr.append(tdTotal)
+    tr.append(tdExcluir)
 
-        console.log(tr)
+    console.log(tr)
 
-        tBody.append(tr)
-    }
-
-
+    tBody.append(tr)
 }
+
+
+
