@@ -1,12 +1,16 @@
 package org.serratec.resources;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.serratec.dto.ClassificacaoDTO;
 import org.serratec.dto.LivroCadastroDTO;
 import org.serratec.exceptions.LivroException;
+import org.serratec.models.Classificacao;
 import org.serratec.models.Livro;
 import org.serratec.repository.AutorRepository;
+import org.serratec.repository.ClassificacaoRepository;
 import org.serratec.repository.EditoraRepository;
 import org.serratec.repository.LivroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +30,9 @@ public class LivroResource {
 	LivroRepository repository;	
 	
 	@Autowired
+	ClassificacaoRepository classificacaoRepository;	
+	
+	@Autowired
 	AutorRepository autorRepository;
 	
 	@Autowired
@@ -37,6 +44,22 @@ public class LivroResource {
 		
 		return new ResponseEntity<>(todos, HttpStatus.OK);
 	}
+	
+	@GetMapping("/classificacao/{codigo}")
+    public ResponseEntity<?> getClassificacaoPorCodigo(@PathVariable String codigo){
+
+        Optional<Livro> optional = repository.findByCodigo(codigo);
+
+        if(optional.isEmpty()) {
+            return new ResponseEntity<> ("Livro Inexistente", HttpStatus.NOT_FOUND);
+
+        } else {
+
+            List<Classificacao> pesquisa = classificacaoRepository.findAllByLivro(optional);
+
+            return new ResponseEntity<> (pesquisa, HttpStatus.OK);
+        }
+    }
 
 	@GetMapping("/livro/detalhe/{codigo}")
 	public ResponseEntity<?> getDetalhe(@PathVariable String codigo) {
@@ -53,7 +76,7 @@ public class LivroResource {
 	public ResponseEntity<?> post(@Validated @RequestBody LivroCadastroDTO dto) {
 		
 		try {
-			Livro livro = dto.toLivro(autorRepository, editoraRepository);
+			Livro livro = dto.toLivro(autorRepository, editoraRepository, classificacaoRepository);
 					
 			repository.save(livro);		
 						

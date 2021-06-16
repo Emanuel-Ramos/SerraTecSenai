@@ -10,10 +10,14 @@ import javax.validation.constraints.NotNull;
 import org.serratec.exceptions.LivroException;
 import org.serratec.models.Autor;
 import org.serratec.models.Categoria;
+import org.serratec.models.Classificacao;
 import org.serratec.models.Editora;
 import org.serratec.models.Livro;
 import org.serratec.repository.AutorRepository;
+import org.serratec.repository.ClassificacaoRepository;
 import org.serratec.repository.EditoraRepository;
+import org.serratec.repository.LeitorRepository;
+import org.serratec.repository.LivroRepository;
 
 public class LivroCadastroDTO {
 
@@ -35,9 +39,10 @@ public class LivroCadastroDTO {
 	@NotNull
 	private Integer numeroPaginas;
 	private List<String> autores;
+	private List<String> classificacoes;
 	private String editora;
 	
-	public Livro toLivro(AutorRepository autorRepository, EditoraRepository editoraRepository) {
+	public Livro toLivro(AutorRepository autorRepository, EditoraRepository editoraRepository, ClassificacaoRepository classificacaoRepository) {
 		
 		Livro livro = new Livro();
 		livro.setCodigo(this.codigo);
@@ -56,6 +61,15 @@ public class LivroCadastroDTO {
 			livro.getAutores().add(autor.get());
 		}
 		
+		for (String codigo : classificacoes) {
+			Optional<Classificacao> classificacao = classificacaoRepository.findByCodigo(codigo);
+			
+			if (classificacao.isEmpty())
+				throw new LivroException("Livro \"" + codigo + "\" não encontrado");
+			
+			livro.getClassificacoes().add(classificacao.get());
+		}
+		
 		Optional<Editora> editora = editoraRepository.findByCodigo(this.editora);
 		
 		if (editora.isEmpty())
@@ -64,6 +78,14 @@ public class LivroCadastroDTO {
 		livro.setEditora(editora.get());
 		
 		return livro;
+	}
+
+	public List<String> getClassificacoes() {
+		return classificacoes;
+	}
+
+	public void setClassificacoes(List<String> classificacoes) {
+		this.classificacoes = classificacoes;
 	}
 
 	public String getCodigo() {
@@ -129,4 +151,5 @@ public class LivroCadastroDTO {
 	public void setEditora(String editora) {
 		this.editora = editora;
 	}
+
 }

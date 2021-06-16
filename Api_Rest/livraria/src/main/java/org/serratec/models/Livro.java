@@ -12,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Livro {
@@ -28,6 +29,9 @@ public class Livro {
 	@ManyToMany
 	private List<Autor> autores = new ArrayList<>();
 	
+	@ManyToMany
+	private List<Classificacao> classificacoes = new ArrayList<>();
+	
 	@Enumerated(EnumType.ORDINAL)
 	private Categoria categoria;
 	
@@ -36,6 +40,7 @@ public class Livro {
 	
 	private Integer numeroPaginas;
 	private Double valor;
+	
 
 	public Long getId() {
 		return id;
@@ -107,5 +112,15 @@ public class Livro {
 
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
-	}	
+	}
+
+	public List<Classificacao> getClassificacoes() {
+		return classificacoes;
+	}
+
+	public void setClassificacoes(List<Classificacao> classificacoes) {
+		this.classificacoes = classificacoes;
+	}
+
+
 }
