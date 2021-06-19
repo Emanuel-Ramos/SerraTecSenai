@@ -1,0 +1,29 @@
+{
+  "keywords": [
+    {
+      "titulo": "CSS",
+      "descricao": "Cascade StyleSheet"
+    },
+    {
+      "titulo": "HTML",
+      "descricao": "Hypertext Markup Language"
+    },
+    {
+      "titulo": "JavaScript",
+      "descricao": "Linguagem de programação interpretada estruturada"
+    },
+    {
+      "titulo": "Acessibilidade",
+      "descricao": "Uma grande parte do conteúdo presente na internet pode se tornar acessível apenas com a utilização correta dos elementos HTML."
+    },
+    {
+      "titulo": "Responsividade",
+      "descricao": "Conjunto de práticas que permite que páginas da Web alterem seu layout e aparência para se adequarem a diferentes larguras, resoluções, et"
+    },
+    {
+      "titulo": "Boas práticas",
+      "descricao": "Práticas e processos utilizados para evitar problemas conhecidos."
+    }
+  ],
+  "mensagens": []
+}

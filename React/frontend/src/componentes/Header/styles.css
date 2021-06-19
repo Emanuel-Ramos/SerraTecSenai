@@ -1,0 +1,13 @@
+.header {
+  background-color: aqua;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15rem;
+}
+
+.imgHeader {
+  height: 10rem;
+  width: 10rem;
+}

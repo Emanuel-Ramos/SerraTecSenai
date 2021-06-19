@@ -1,0 +1,26 @@
+.cardsArea {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.blocos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 600px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  margin: 10px;
+  height: 150px;
+  width: 150px;
+  background-color: aquamarine;
+}
