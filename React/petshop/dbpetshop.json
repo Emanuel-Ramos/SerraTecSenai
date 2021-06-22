@@ -1,0 +1,60 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Shampoo para gatos",
+      "preco": 29.9,
+      "img" : "https://www.petlove.com.br/images/products/224894/large/Shampoo_Sanol_Cat_para_Gatos_-_500_mL_31077040.jpg?1592491031"
+    },
+    {
+      "id": 2,
+      "nome": "Shampoo para cães",
+      "preco": 39.9,
+      "img" : "https://cdnv2.moovin.com.br/agrosolo/imagens/produtos/det/procao-shampoo-pelos-claros-500ml-4b38619eb4b569c9232285575b585d6b.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Bola de lã",
+      "preco": 9.9,
+      "img" : "https://image.freepik.com/fotos-gratis/bola-de-fio-de-la-roxa-isolada-no-branco_38076-788.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "Bola de plástico",
+      "preco": 9.9,
+      "img" : "https://cdn.w600.comps.canstockphoto.com.br/bola-rosa-pl%C3%A1stico-banco-de-imagem_csp13393162.jpg"
+    },
+    {
+      "id": 5,
+      "nome": "Ração para gatos",
+      "preco": 39.9,
+      "img" : "https://www.petlove.com.br/images/products/210714/large/Ra%C3%A7%C3%A3o_Golden_Gatos_Filhotes_Frango_-_3_Kg_1213599.jpg?1562150103"
+    },
+    {
+      "id": 6,
+      "nome": "Ração para cães",
+      "preco": 39.9,
+      "img" : "https://www.petlove.com.br/images/products/210670/large/Ra%C3%A7%C3%A3o_Golden_Formula_Carne_e_Arroz_para_C%C3%A3es_Adultos_de_Ra%C3%A7as_Pequenas_-_1_Kg_1210469.jpg?1562146144"
+    }
+  ],
+  "servicos": [
+    {
+      "id": 1,
+      "nome": "Banho",
+      "preco": 39.9,
+      "img" : "https://www.cobasi.com.br/arquivos/cachorros-spet.png?v=7744558214"
+    },
+    {
+      "id": 2,
+      "nome": "Tosa",
+      "preco": 39.9,
+      "img" : "https://lh3.googleusercontent.com/proxy/BoAhvPpLQFNCJvlawCSWDs3HjAP7rc-KEB2zJCZISWTrqa8mkavGZ0KPCwrJhOqnVnaHR3-Bt2rotIF4mj25YoCegPi_O2av8uYGQv1gnEh2w3r9C0-Oo-tmZlIMKo5HdgJfSDt75w"
+    },
+    {
+      "id": 3,
+      "nome": "Banho e tosa",
+      "preco": 79.9,
+      "img" : "https://media.gazetadopovo.com.br/viver-bem/2017/09/dognobanho-600x400-0d99ac80.jpg"
+    }
+  ]
+}

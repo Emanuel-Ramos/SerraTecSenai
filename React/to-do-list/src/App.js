@@ -8,11 +8,19 @@ import { useEffect } from "react";
 function App() {
 
   const [tarefas, setTarefas] = useState([])
+
+  const obterTarefas = () => {
+    axios.get('http://localhost:8000/tarefas').then(response => setTarefas(response.data)).catch(erro => console.log(erro))
+  }
+
   const adicionarTarefa = (tarefa) => {
-    axios.post('http://localhost:8000/tarefas', {
-      tarefa
-    })
+    axios.post('http://localhost:8000/tarefas', tarefa)
       .then(function (response) {
+        const novaTarefa = response.data
+        setTarefas([
+          novaTarefa,
+          ...tarefas
+        ])
         console.log(response);
       })
       .catch(function (error) {
@@ -21,22 +29,21 @@ function App() {
   }
 
   useEffect(() => {
-    axios.get('http://localhost:8000/tarefas').then(response => {
-      setTarefas(response.data)
-    }, [])
-  })
+    obterTarefas()
+  }, [])
 
-
+  const excluir = (id) => {
+    axios.delete('http://localhost:8000/tarefas/' + id).then(() => {
+      obterTarefas()
+    })
+  }
 
   return (
     <div>
       <Formulario aoSalvar={adicionarTarefa} />
       <Tarefas>
-        {tarefas.map((item, indice) =>
-          // <li key={indice}>
-          //   {item.tarefa} - [ <a href="/#" onClick={() => { excluir(indice) }}>excluir</a> ]
-          // </li>
-          <Item key={indice} indice={indice} item={item.tarefa} />
+        {tarefas.map((item) =>
+          <Item key={item.id} excluir={excluir} id={item.id} item={item.tarefa} />
 
         )}
       </Tarefas>
