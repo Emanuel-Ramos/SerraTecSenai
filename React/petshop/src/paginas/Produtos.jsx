@@ -1,6 +1,6 @@
 import './styles.css'
 import { useEffect, useState } from 'react'
-import axios from "axios";
+import http from '../http';
 import ProdutoCard from '../ProdutoCard';
 import NavBar from '../NavBar';
 
@@ -9,7 +9,7 @@ const Produtos = () => {
     const [produtos, setProdutos] = useState([])
 
     const obterProdutos = () => {
-        axios.get("http://localhost:8080/produtos").then(response => { 
+        http.get("produtos").then(response => { 
         setProdutos(response.data);
            
         }).catch(erro => console.log(erro))

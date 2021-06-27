@@ -1,10 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
+* {
+  font-family: "Amatic SC", cursive;
+}
+
+body {
+  background-color: rgb(210, 105, 30, 0.5);
+}
+
 .navBar {
   display: flex;
-  flex-direction: row;
   align-items: center;
-
-  margin-top: 5px;
+  justify-content: space-between;
   box-shadow: 0 3px 6px hsl(0deg 0% 50% / 28%);
+  background-color: chocolate;
+}
+
+.navBar-routes {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .texto-nav-bar {
@@ -12,14 +26,20 @@
 }
 
 .logo {
-  width: 100px;
+  width: 200px;
   height: 100px;
   margin: 5px;
 }
 
 .navBar-item {
+  font-size: 50px;
   margin: 10px;
   text-decoration: none;
+  color: black;
+}
+
+.navBar-item a:visited {
+  color: black;
 }
 
 .cardsArea {
@@ -41,4 +61,73 @@
   align-items: center;
   flex-direction: column;
   margin-top: 200px;
+}
+
+.formArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  padding: 3rem;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(210, 105, 30);
+  border-radius: 75px;
+  max-width: 800px;
+  height: 500px;
+  width: 50%;
+}
+
+.cadastroForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(210, 105, 30);
+  border-radius: 75px;
+  max-width: 800px;
+  height: 500px;
+  width: 50%;
+}
+
+.formLabel {
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.status {
+  display: none;
+}
+
+.formLabel input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 20px;
+  font-size: 24px;
+  background-color: transparent;
+  margin: 2px;
+}
+
+.formLabel input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.formBtn {
+  width: 100px;
+  font-size: 35px;
+  font-weight: bolder;
+  border: none;
+  margin: 5px;
+  background-color: transparent;
 }

@@ -1,4 +1,4 @@
-import axios from "axios";
+import http from "../http";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import NavBar from "../NavBar";
@@ -7,7 +7,7 @@ const Produto = () => {
     const {id} = useParams()
     const [produto, setProduto] = useState({})
     useEffect(() => {
-        axios.get('http://localhost:8080/produtos/' + id)
+        http.get('produtos/' + id)
         .then(response => setProduto(response.data))}, [id])
     
     return(

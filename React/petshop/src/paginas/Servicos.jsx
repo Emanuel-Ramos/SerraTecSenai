@@ -1,5 +1,5 @@
 import './styles.css'
-import axios from "axios";
+import http from '../http';
 import { useEffect, useState } from 'react';
 import ServicoCard from '../ServicoCard';
 import NavBar from '../NavBar';
@@ -8,7 +8,7 @@ const Servicos = () => {
     const [servicosItens, setServicosItens] = useState([])
 
     const obterServicos = () => {
-        axios.get('http://localhost:8080/servicos').then((response) =>{
+        http.get('servicos').then((response) =>{
         console.log(response.data)    
         setServicosItens(response.data)
         })
